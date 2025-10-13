@@ -1,0 +1,114 @@
+/* === General Style === */
+body {
+  background: #f9fafb;
+  color: #333;
+  margin-top: 0;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+}
+
+/* Smooth transitions */
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+/* === Headings === */
+h1, h2, h3, h4, h5 {
+  color: #1a237e;
+  font-weight: 600;
+}
+
+/* === Navbar === */
+.bg-elegant {
+  background: linear-gradient(90deg, #1a237e, #3949ab);
+}
+
+.site-header .navbar-nav .nav-link {
+  color: #fff;
+  font-weight: 500;
+  margin-right: 15px;
+}
+
+.site-header .navbar-nav .nav-link:hover,
+.site-header .navbar-nav .nav-link.active {
+  color: #ffca28;
+  text-decoration: none;
+  transform: scale(1.05);
+}
+
+/* === Main Layout === */
+.container {
+  max-width: 1100px;
+}
+
+/* === Post Section === */
+.content-section {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.content-section:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* === Article Titles === */
+.article-title {
+  color: #1a237e;
+  font-size: 1.7rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a.article-title:hover {
+  color: #e64a19;
+}
+
+/* === Article Content === */
+.article-content {
+  color: #555;
+  font-size: 1.05rem;
+  margin-top: 10px;
+}
+
+/* === Sidebar === */
+.sidebar {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+}
+
+.sidebar h3 {
+  color: #1a237e;
+  font-size: 1.3rem;
+  border-bottom: 2px solid #e3e3e3;
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+}
+
+.list-group-item {
+  background: transparent;
+  border: none;
+  color: #444;
+  font-weight: 500;
+  padding: 10px 0;
+}
+
+.list-group-item:hover {
+  color: #1a237e;
+  transform: translateX(5px);
+}
+
+/* === Footer === */
+footer {
+  background: #1a237e;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+  border-radius: 8px 8px 0 0;
+}

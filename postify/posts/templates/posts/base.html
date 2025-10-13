@@ -1,0 +1,95 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+         <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.rtl.min.css" integrity="sha384-CfCrinSRH2IR6a4e6fy2q6ioOX7O6Mtm1L9vRvFZ1trBncWmMePhzvafv7oIcWiW" crossorigin="anonymous">
+
+       <link rel="stylesheet" type="text/css" href="{% static 'posts/main.css' %}">
+
+
+        {% if title %}
+            <title> Postify- {{title}}</title>
+        {% else %}
+            <title>Postify</title>
+        {% endif%}
+
+    </head>
+<body>
+<!-- Elegant Navbar -->
+<nav class="navbar navbar-expand-lg bg-elegant site-header" style="background-color: #000035;">
+  <div class="container-fluid">
+    <!-- Brand -->
+    <a class="navbar-brand text-white fw-bold" href="#">Postify</a>
+
+    <!-- Toggler button for small screens -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar content -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="d-flex w-100 justify-content-between">
+        <!-- Left links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="{% url 'posts-home' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="{% url 'posts-about' %}">About</a>
+          </li>
+        </ul>
+
+        <!-- Right links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Register</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main role="main" class="container my-4">
+  <div class="row">
+    <!-- Main content area -->
+    <div class="col-md-8">
+      {% block content %}
+      {% endblock %}
+    </div>
+
+    <!-- Sidebar -->
+    <div class="col-md-4">
+      <div class="content-section p-3 bg-light rounded shadow-sm">
+        <h3>Our Sidebar</h3>
+        <p class="text-muted">You can put any information here you'd like.</p>
+        <ul class="list-group">
+          <li class="list-group-item list-group-item-light">Latest Posts</li>
+          <li class="list-group-item list-group-item-light">Announcements</li>
+          <li class="list-group-item list-group-item-light">Calendars</li>
+          <li class="list-group-item list-group-item-light">Etc</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</main>
+
+
+
+  
+
+     <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" 
+            crossorigin="anonymous"></script>
+</body>
+</html>
