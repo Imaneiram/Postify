@@ -1,6 +1,23 @@
 {% extends "posts/base.html" %}
 {% load crispy_forms_tags %}
-{% block content%}
-    <h1>{{user.username}}</h1>
-{% endblock content %}
+{% block content %}
+{% load static %}
 
+<div class="content-section">
+    <div class="d-flex align-items-center mb-4 p-3 shadow-sm rounded bg-light">
+        <img class="rounded-circle me-4 border border-2 border-primary shadow-sm"
+             src="{{ user.profile.image.url }}"
+             alt="User image"
+             width="110"
+             height="110"
+             style="margin-right: 30px;">
+             
+        <div>
+            <h2 class="fw-bold mb-1 text-dark">{{ user.username }}</h2>
+            <p class="text-secondary mb-0">{{ user.email }}</p>
+        </div>
+    </div>
+    <!-- FORM HERE -->
+</div>
+
+{% endblock content %}
